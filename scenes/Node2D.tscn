@@ -48,6 +48,9 @@ tracks/0/keys = {
 [node name="celula" type="Node2D" parent="."]
 position = Vector2( 500, 200 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="celula"]
 texture = ExtResource( 3 )
@@ -63,6 +66,9 @@ anims/celulanim = SubResource( 2 )
 [node name="glicose" type="Node2D" parent="."]
 position = Vector2( 150, 200 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="glicose"]
 texture = ExtResource( 2 )
