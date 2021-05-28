@@ -2,12 +2,12 @@
 ## Descrição do Projeto
 Jogo eletrônico para o auxilio na aprendizagem sobre o processo de respiração celular.
 ### Integrantes: 
-- Gabriel Baganho de Castilho 
-- João Marcos Ruffo de Oliveira da Cunha 
-- José Gabriel de Souza Flores 
-- Matheus Emidio Santos da Silva
-- Willian Andrade de Oliveira
+- Gabriel Baganho
+- João Marcos
+- José Gabriel
+- Matheus Emidio 
+- Willian Andrade 
 
 ### Orientador:
-- Renato Cristiano Montanher
+- Renato Cristiano
 ### 🚧  🚀 Em construção...  🚧
