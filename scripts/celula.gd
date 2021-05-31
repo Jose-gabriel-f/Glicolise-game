@@ -7,6 +7,6 @@ func _ready():
 	pass
 
 func _on_Area2D_area_entered(area):
-	get_node("Animationcelula").play("celulanim")
+	print(area.get_name(), " entrou na célula")
 
 # 

@@ -21,8 +21,3 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 func _on_Area2D_area_entered(area):
 	get_node("AnimationPlayer").play("animacaoglicose")
-	var timer = Timer.new()
-	self.add_child(timer)
-	timer.connect("timeout", self, "queue_free")
-	timer.set_wait_time(1)
-	timer.start()
