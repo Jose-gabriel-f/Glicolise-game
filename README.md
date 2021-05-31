@@ -5,7 +5,7 @@ Jogo eletrônico para o auxilio na aprendizagem sobre o processo de respiração
 - Gabriel Baganho
 - João Marcos
 - [José Gabriel](https://github.com/Jose-gabriel-f)
-- [Matheus Emídio](https://github.com/emidiomatheus)
+- <a href="https://github.com/emidiomatheus" target="_blank">Matheus Emídio</a>
 - Willian Andrade 
 
 ### Orientador:
