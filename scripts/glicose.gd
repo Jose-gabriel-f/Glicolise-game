@@ -14,11 +14,11 @@ func followMouse():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-		if event.pressed:
+		if event.pressed == true:
 			selecionado = true
 		else:
 			selecionado = false
-
+			
 func _on_Area2D_area_entered(area):
 	get_node("AnimationPlayer").play("animacaoglicose")
 	
