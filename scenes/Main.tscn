@@ -70,7 +70,7 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="glicose" type="Node2D" parent="."]
-position = Vector2( 183.59, 201.345 )
+position = Vector2( 189.103, 205.873 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
