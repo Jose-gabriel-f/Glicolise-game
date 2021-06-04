@@ -10,4 +10,6 @@ Jogo eletrônico para o auxilio na aprendizagem sobre o processo de respiração
 
 ### Orientador:
 - Renato Cristiano
+### Co-orientador:
+- Ivan Miletovic
 ### 🚧  🚀 Em construção...  🚧
