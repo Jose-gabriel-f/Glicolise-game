@@ -4,7 +4,7 @@ var selecionado = false
 var dentro_celula = false
 
 func _ready():
-	pass 
+	pass
 
 func _process(delta):
 	if selecionado:
