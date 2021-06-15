@@ -69,8 +69,6 @@ texture = ExtResource( 2 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="celula"]
-
 [node name="glicose" type="Node2D" parent="."]
 position = Vector2( 189.103, 205.873 )
 script = ExtResource( 4 )
