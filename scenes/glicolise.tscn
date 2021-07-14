@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Node" type="Node"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 609.0
+margin_bottom = 360.0
+text = "Cena alterada com sucesso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
