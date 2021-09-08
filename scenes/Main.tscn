@@ -95,6 +95,7 @@ anims/animacaoglicose = SubResource( 3 )
 script = ExtResource( 6 )
 
 [node name="atp" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 179.049, 114.422 )
 
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_area_entered"]
