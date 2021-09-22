@@ -9,12 +9,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-
 [node name="Area_nad+" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_nad+"]
 polygon = PoolVector2Array( -55.4447, 30.6737, 1.7663, -50.905, 40.9664, 30.6737 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
 
 [connection signal="input_event" from="Area_nad+" to="." method="_on_Area2D_input_event"]

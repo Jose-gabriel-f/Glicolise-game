@@ -6,6 +6,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	rotate(0.001)
 	if selecionado:
 		followMouse()
 
