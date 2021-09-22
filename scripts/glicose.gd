@@ -23,6 +23,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_Area2D_area_entered(area):
 	if area.name == "Area_celula":
 		get_node("AnimationPlayer").play("animacaoglicose")
+		selecionado = false
 		dentro_celula = true
 	
 	

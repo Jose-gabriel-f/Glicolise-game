@@ -1,17 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://images/nad+.png" type="Texture" id=1]
+[ext_resource path="res://scripts/nad+.gd" type="Script" id=1]
+[ext_resource path="res://images/nad+.png" type="Texture" id=2]
 
-[node name="nad+" type="Area2D"]
+[node name="nad+" type="Node2D"]
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.435294, 0.682353, 0.980392, 1 )
-position = Vector2( 0, 1 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PoolVector2Array( -56, 32, 4, -54, 45, 35 )
+[node name="Area_nad+" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_nad+"]
+polygon = PoolVector2Array( -55.4447, 30.6737, 1.7663, -50.905, 40.9664, 30.6737 )
+
+[connection signal="input_event" from="Area_nad+" to="." method="_on_Area2D_input_event"]

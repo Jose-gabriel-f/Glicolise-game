@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/atp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/glicose.gd" type="Script" id=4]
 [ext_resource path="res://scripts/celula.gd" type="Script" id=5]
-[ext_resource path="res://scripts/atp.gd" type="Script" id=6]
+[ext_resource path="res://scenes/nad+.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 74.4783, 74.6268 )
@@ -91,13 +91,12 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="glicose"]
 anims/animacaoglicose = SubResource( 3 )
 
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource( 6 )
+[node name="atp" parent="." instance=ExtResource( 3 )]
+position = Vector2( 114.422, 61.4489 )
 
-[node name="atp" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 179.049, 114.422 )
+[node name="nad+" parent="." instance=ExtResource( 6 )]
+position = Vector2( 289.234, 69.9246 )
 
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_input_event"]
-[connection signal="input_event" from="Node2D/atp" to="Node2D" method="_on_atp_input_event"]
