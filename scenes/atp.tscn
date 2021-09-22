@@ -12,13 +12,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
 [node name="Area_atp" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_atp"]
 position = Vector2( -1.05946, -13.773 )
 shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
 
 [connection signal="input_event" from="Area_atp" to="." method="_on_Area2D_input_event"]
