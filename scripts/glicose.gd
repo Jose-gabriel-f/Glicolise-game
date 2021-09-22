@@ -7,6 +7,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	rotate(0.009)
 	if selecionado:
 		followMouse()
 
