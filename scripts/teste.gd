@@ -1,27 +1,20 @@
-<<<<<<< HEAD
-extends Node2D
+extends RigidBody2D
 
 var selecionado = false
 
 func _ready():
-	pass # Replace with function body.
-
+	pass
+	
 func _process(delta):
-	rotate(0.009)
 	if selecionado:
 		followMouse()
 
 func followMouse():
 	position = get_global_mouse_position()
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
+func _on_glicose_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-		if event.pressed:
+		if event.pressed == true:
 			selecionado = true
 		else:
 			selecionado = false
-=======
-extends Area2D
-
-
->>>>>>> main

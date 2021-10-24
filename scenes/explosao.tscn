@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Node2D
+
+func _ready():
+	$Particles2D.emitting = true
+
+func _process(delta):
+	if $Particles2D.emitting == false:
+		queue_free()
+"
+
+[sub_resource type="CanvasItemMaterial" id=5]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.0444444, 0.277778, 0.966667, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.968627, 0.866667, 0.054902, 1, 0.99308, 0.285202, 0.0151553, 1, 1, 0.120636, 0.00390625, 1, 0.6, 0.584314, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 60.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 10.0
+scale = 20.0
+scale_random = 0.5
+color_ramp = SubResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 5 )
+emitting = false
+amount = 60
+one_shot = true
+process_material = SubResource( 3 )

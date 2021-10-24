@@ -1,10 +1,9 @@
 extends Node2D
 
 var selecionado = false
-var dentro_celula = false
 
 func _ready():
-	pass
+	pass # Replace with function body.
 
 func _process(delta):
 	rotate(0.009)
@@ -16,16 +15,7 @@ func followMouse():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-		if event.pressed == true and dentro_celula == false:
+		if event.pressed:
 			selecionado = true
 		else:
 			selecionado = false
-			
-func _on_Area2D_area_entered(area):
-	if area.name == "Area_celula":
-		get_node("AnimationPlayer").play("animacaoglicose")
-		selecionado = false
-		dentro_celula = true
-	
-	
-	
