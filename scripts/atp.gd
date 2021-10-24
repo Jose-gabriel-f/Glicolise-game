@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 extends Node2D
 
 var selecionado = false
@@ -20,8 +19,3 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			selecionado = true
 		else:
 			selecionado = false
-=======
-extends Area2D
-
-
->>>>>>> main

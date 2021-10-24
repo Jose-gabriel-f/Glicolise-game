@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://images/glicose.png" type="Texture" id=1]
 [ext_resource path="res://images/celula.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scripts/glicose.gd" type="Script" id=4]
 [ext_resource path="res://scripts/celula.gd" type="Script" id=5]
 [ext_resource path="res://scenes/nad+.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Button.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 74.4783, 74.6268 )
@@ -71,6 +72,8 @@ texture = ExtResource( 2 )
 visible = false
 shape = SubResource( 1 )
 
+[node name="CameraGeral" type="Camera2D" parent="celula"]
+
 [node name="glicose" type="Node2D" parent="."]
 position = Vector2( 175.505, 203.113 )
 script = ExtResource( 4 )
@@ -97,6 +100,20 @@ position = Vector2( 114.422, 61.4489 )
 [node name="nad+" parent="." instance=ExtResource( 6 )]
 position = Vector2( 289.234, 69.9246 )
 
+[node name="CameraDetalhe" type="Camera2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 606.013
+margin_top = 66.7462
+margin_right = 650.013
+margin_bottom = 89.7462
+text = "Botão"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
