@@ -8,6 +8,7 @@ func _on_Area2D_area_entered(area):
 
 func _on_Area_celula_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		print("click", event.position)
 		if $"../CameraGeral".current:
 			$CameraDetalhe.current = true
 		else:
