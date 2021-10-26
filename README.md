@@ -1,5 +1,5 @@
 # Glicólise Game
-![Peek 09-08-2021 20-09](https://user-images.githubusercontent.com/62730379/128785497-7a39c497-7472-425c-ba8f-96245a4b3eb7.gif)
+![Peek 26-10-2021 19-36](https://user-images.githubusercontent.com/62730379/138970830-bf77b7ae-4ce2-46dc-bee9-c35cc290ce74.gif)
 ## Descrição do Projeto
 Jogo eletrônico para o auxilio na aprendizagem sobre o processo de respiração celular.
 ### Integrantes:
