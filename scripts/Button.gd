@@ -3,11 +3,8 @@ extends Button
 func _ready():
 	pass
 
-#func _process(delta):
-#	pass
-
 func _on_Button_pressed():
-	if $Node2D/CameraGeral.current:
-		$CameraDetalhe.current = true
+	if $"../CameraGeral".current:
+		$"../celula/CameraDetalhe".current = true
 	else :
-		$CameraGeral.current = true
+		$"../CameraGeral".current = true

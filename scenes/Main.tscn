@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/nad+.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Button.gd" type="Script" id=7]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=1]
 radius = 202.405
 
 [sub_resource type="CircleShape2D" id=2]
@@ -70,11 +70,12 @@ texture = ExtResource( 2 )
 [node name="Area_celula" type="Area2D" parent="celula"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="celula/Area_celula"]
-shape = SubResource( 4 )
+visible = false
+shape = SubResource( 1 )
 
 [node name="CameraDetalhe" type="Camera2D" parent="celula"]
-position = Vector2( -2, 0 )
-zoom = Vector2( 0.3, 0.3 )
+position = Vector2( -150, 0 )
+zoom = Vector2( 0.5, 0.5 )
 
 [node name="glicose" type="Node2D" parent="."]
 position = Vector2( 136.61, 191.831 )
@@ -97,21 +98,23 @@ shape = SubResource( 2 )
 anims/animacaoglicose = SubResource( 3 )
 
 [node name="atp" parent="." instance=ExtResource( 3 )]
-position = Vector2( 93.2088, 61.4489 )
+position = Vector2( 97.4514, 84.0763 )
 
 [node name="nad+" parent="." instance=ExtResource( 6 )]
-position = Vector2( 235.494, 61.4393 )
+position = Vector2( 248.222, 67.0962 )
 
 [node name="CameraGeral" type="Camera2D" parent="."]
-position = Vector2( 337.724, 178.071 )
+position = Vector2( 337, 225 )
+offset = Vector2( 100, 0 )
 current = true
+zoom = Vector2( 1.2, 1.2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 598.013
-margin_top = 298.746
-margin_right = 647.013
-margin_bottom = 321.746
-text = "Botão"
+margin_left = 705.493
+margin_top = 359.557
+margin_right = 783.493
+margin_bottom = 382.557
+text = "Aproximar"
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
