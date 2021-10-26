@@ -6,9 +6,6 @@ func _ready():
 func _on_Area2D_area_entered(area):
 	print(area.get_name(), " entrou na célula")
 
-func _input(event):
+func _on_Area_celula_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		if event.position.x > 424 and event.position.x < 575 and event.position.y > 123 and event.position.y < 275:
-			print("click", event.position)
-			$CameraDetalhe.current = true
-			#if $CameraDetalhe.current:
+		$CameraDetalhe.current = true
