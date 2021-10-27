@@ -78,7 +78,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "voltar" ]
+"values": [ "Voltar" ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -171,6 +171,7 @@ margin_bottom = 382.557
 text = "Aproximar"
 script = ExtResource( 7 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
