@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://images/glicose.png" type="Texture" id=1]
-[ext_resource path="res://images/celula.png" type="Texture" id=2]
+[ext_resource path="res://images/celula(2).png" type="Texture" id=2]
 [ext_resource path="res://scenes/atp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/glicose.gd" type="Script" id=4]
 [ext_resource path="res://scripts/celula.gd" type="Script" id=5]
 [ext_resource path="res://scenes/nad+.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Button.gd" type="Script" id=7]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 74.4783, 74.6268 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 202.405
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 60.1835
@@ -38,7 +39,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 1, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.15, 0.15 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:position")
@@ -50,7 +51,61 @@ tracks/2/keys = {
 "times": PoolRealArray( 1.3 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 463.293, 232.843 ) ]
+"values": [ Vector2( 355, 200 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "ida"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 420, 290 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "voltar" ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "volta"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 705.493, 359.557 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Aproximar" ]
 }
 
 [node name="Main" type="Node"]
@@ -63,6 +118,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="celula"]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="Area_celula" type="Area2D" parent="celula"]
@@ -71,8 +127,12 @@ texture = ExtResource( 2 )
 visible = false
 shape = SubResource( 1 )
 
+[node name="CameraDetalhe" type="Camera2D" parent="celula"]
+position = Vector2( -150, 0 )
+zoom = Vector2( 0.5, 0.5 )
+
 [node name="glicose" type="Node2D" parent="."]
-position = Vector2( 175.505, 203.113 )
+position = Vector2( 179.638, 188.686 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
@@ -92,11 +152,34 @@ shape = SubResource( 2 )
 anims/animacaoglicose = SubResource( 3 )
 
 [node name="atp" parent="." instance=ExtResource( 3 )]
-position = Vector2( 114.422, 61.4489 )
+position = Vector2( 105.937, 95.39 )
 
 [node name="nad+" parent="." instance=ExtResource( 6 )]
-position = Vector2( 289.234, 69.9246 )
+position = Vector2( 253.879, 41.6404 )
+
+[node name="CameraGeral" type="Camera2D" parent="."]
+position = Vector2( 337, 225 )
+offset = Vector2( 100, 0 )
+current = true
+zoom = Vector2( 1.2, 1.2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 705.493
+margin_top = 359.557
+margin_right = 783.493
+margin_bottom = 382.557
+text = "Aproximar"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Button"]
+anims/ida = SubResource( 4 )
+anims/volta = SubResource( 5 )
 
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
+[connection signal="input_event" from="celula/Area_celula" to="celula" method="_on_Area_celula_input_event"]
 [connection signal="area_entered" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

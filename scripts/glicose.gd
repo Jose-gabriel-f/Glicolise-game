@@ -18,13 +18,15 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed == true and dentro_celula == false:
 			selecionado = true
+		elif event.pressed == false and dentro_celula == true:
+			get_node("AnimationPlayer").play("animacaoglicose")
+			selecionado = false
+			$Area_glicose.queue_free()
 		else:
 			selecionado = false
 			
 func _on_Area2D_area_entered(area):
 	if area.name == "Area_celula":
-		get_node("AnimationPlayer").play("animacaoglicose")
-		selecionado = false
 		dentro_celula = true
 	
 	
