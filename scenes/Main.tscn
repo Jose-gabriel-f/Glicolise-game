@@ -68,7 +68,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 420, 290 ) ]
+"values": [ Vector2( 440, 290 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:text")
@@ -80,7 +80,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "Voltar" ]
+"values": [ "Distanciar" ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -137,7 +137,7 @@ float noise(vec2 coord){
 
 float fbm(vec2 coord){
 	float value = 0.0;
-	float scale = 0.5;
+	float scale = 0.9;
 
 	for(int i = 0; i < OCTAVES; i++){
 		value += noise(coord) * scale;
@@ -248,6 +248,7 @@ __meta__ = {
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.305882, 0, 0, 1 )
 material = SubResource( 7 )
 position = Vector2( 441.496, 227.322 )
 scale = Vector2( 19.1278, 11.1974 )
