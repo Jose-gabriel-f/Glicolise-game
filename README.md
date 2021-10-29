@@ -10,7 +10,7 @@ Jogo eletrônico para o auxilio na aprendizagem sobre o processo de respiração
 - Willian Andrade 
 
 ### Orientador:
-- Renato Cristiano
+- [Renato Cristiano](https://github.com/RenatoMontanher)
 ### Co-orientador:
 - Ivan Miletovic
 ### 🚧  🚀 Em construção...  🚧
