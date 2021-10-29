@@ -218,7 +218,7 @@ __meta__ = {
 [node name="shader" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color( 0.588235, 0.184314, 0.184314, 1 )
 material = SubResource( 7 )
-position = Vector2( 439.377, 227.322 )
+position = Vector2( 438.827, 227.914 )
 scale = Vector2( 19.1278, 11.1974 )
 texture = ExtResource( 9 )
 
