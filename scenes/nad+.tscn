@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/nad+.gd" type="Script" id=1]
-[ext_resource path="res://images/nad+.png" type="Texture" id=2]
+[ext_resource path="res://images/NAD+(new).png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 36.2117
+height = 64.9701
 
 [node name="nad+" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,7 +18,9 @@ texture = ExtResource( 2 )
 
 [node name="Area_nad+" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_nad+"]
-polygon = PoolVector2Array( -55.4447, 30.6737, 1.7663, -50.905, 40.9664, 30.6737 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_nad+"]
+visible = false
+rotation = 1.5708
+shape = SubResource( 1 )
 
 [connection signal="input_event" from="Area_nad+" to="." method="_on_Area2D_input_event"]

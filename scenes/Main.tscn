@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://images/glicose.png" type="Texture" id=1]
+[ext_resource path="res://images/glicose(new).png" type="Texture" id=1]
 [ext_resource path="res://images/celula(2).png" type="Texture" id=2]
 [ext_resource path="res://scenes/atp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/glicose.gd" type="Script" id=4]
