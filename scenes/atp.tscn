@@ -19,6 +19,7 @@ texture = ExtResource( 1 )
 [node name="Area_atp" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_atp"]
+visible = false
 position = Vector2( 3.45707e-06, 2.57492e-05 )
 shape = SubResource( 1 )
 
