@@ -153,7 +153,7 @@ position = Vector2( -150, 0 )
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="glicose" type="Node2D" parent="."]
-position = Vector2( 227.157, 224.794 )
+position = Vector2( 129.767, 262.252 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -171,16 +171,14 @@ shape = SubResource( 2 )
 anims/animacaoglicose = SubResource( 3 )
 
 [node name="atp" parent="." instance=ExtResource( 3 )]
-position = Vector2( 623.639, 206.792 )
-scale = Vector2( 0.15, 0.15 )
+position = Vector2( 295.51, 341.64 )
 
 [node name="atp2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 643.261, 218.09 )
-scale = Vector2( 0.15, 0.15 )
+position = Vector2( 379.559, 394.89 )
 
 [node name="nad+" parent="." instance=ExtResource( 6 )]
-position = Vector2( 406.398, 179.057 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 256.567, 66.684 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="CameraGeral" type="Camera2D" parent="."]
 position = Vector2( 337, 225 )
