@@ -180,6 +180,10 @@ position = Vector2( 379.559, 394.89 )
 position = Vector2( 256.567, 66.684 )
 scale = Vector2( 0.75, 0.75 )
 
+[node name="nad+2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 180.239, 143.011 )
+scale = Vector2( 0.75, 0.75 )
+
 [node name="CameraGeral" type="Camera2D" parent="."]
 position = Vector2( 337, 225 )
 offset = Vector2( 100, 0 )
