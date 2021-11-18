@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://images/glicose(new).png" type="Texture" id=1]
 [ext_resource path="res://images/celula(2).png" type="Texture" id=2]
 [ext_resource path="res://scenes/atp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/glicose.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Control.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/nad+.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Button.gd" type="Script" id=7]
 [ext_resource path="res://images/red-blood-cells-gcb481650c_1280.jpg" type="Texture" id=8]
@@ -229,6 +230,12 @@ texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Control" parent="." instance=ExtResource( 5 )]
+margin_left = 815.0
+margin_top = -7.0
+margin_right = 2.0
+margin_bottom = -371.0
 
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="celula/Area_celula" to="celula" method="_on_Area_celula_input_event"]

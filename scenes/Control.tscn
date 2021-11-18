@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 208.0
+margin_bottom = 236.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="."]
+margin_right = 24.0
+margin_bottom = 24.0
+text = "Introduzir glicóse na célula"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_top = 27.0
+margin_right = 24.0
+margin_bottom = 51.0
+text = "Inserir 2 ATPs na glicóse"
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+margin_top = 53.0
+margin_right = 24.0
+margin_bottom = 77.0
+text = "Inserir 2 NAD+ na glicóse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
