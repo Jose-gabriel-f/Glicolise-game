@@ -154,7 +154,7 @@ position = Vector2( -150, 0 )
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="glicose" type="Node2D" parent="."]
-position = Vector2( 129.767, 262.252 )
+position = Vector2( 159, 272 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -232,10 +232,7 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 5 )]
-margin_left = 815.0
-margin_top = -7.0
-margin_right = 2.0
-margin_bottom = -371.0
+position = Vector2( 803, -28 )
 
 [connection signal="area_entered" from="celula/Area_celula" to="celula" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="celula/Area_celula" to="celula" method="_on_Area_celula_input_event"]

@@ -21,6 +21,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		elif event.pressed == false and dentro_celula == true:
 			get_node("AnimationPlayer").play("animacaoglicose")
 			selecionado = false
+			$"../Control/CheckBox5".pressed = true
+			$"../Control/AudioStreamPlayer".play()
 			$Area_glicose.queue_free()
 		else:
 			selecionado = false
@@ -28,6 +30,3 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_Area2D_area_entered(area):
 	if area.name == "Area_celula":
 		dentro_celula = true
-	
-	
-	
