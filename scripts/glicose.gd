@@ -2,6 +2,7 @@ extends Node2D
 
 var selecionado = false
 var dentro_celula = false
+onready var timer = $Timer
 
 func _ready():
 	pass
@@ -23,6 +24,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			selecionado = false
 			$"../Control/CheckBox5".pressed = true
 			$"../Control/AudioStreamPlayer".play()
+			timer.start()
 			$Area_glicose.queue_free()
 		else:
 			selecionado = false
@@ -30,3 +32,9 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_Area2D_area_entered(area):
 	if area.name == "Area_celula":
 		dentro_celula = true
+
+
+func _on_Timer_timeout():
+	$"../Control/AudioStreamPlayer".stop()
+	print("foi")
+	$Timer.queue_free()

@@ -171,6 +171,9 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="glicose"]
 anims/animacaoglicose = SubResource( 3 )
 
+[node name="Timer" type="Timer" parent="glicose"]
+wait_time = 0.5
+
 [node name="atp" parent="." instance=ExtResource( 3 )]
 position = Vector2( 295.51, 341.64 )
 
@@ -238,4 +241,5 @@ position = Vector2( 803, -28 )
 [connection signal="input_event" from="celula/Area_celula" to="celula" method="_on_Area_celula_input_event"]
 [connection signal="area_entered" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="glicose/Area_glicose" to="glicose" method="_on_Area2D_input_event"]
+[connection signal="timeout" from="glicose/Timer" to="glicose" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
