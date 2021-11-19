@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/Respiração celular.png" type="Texture" id=1]
 [ext_resource path="res://scripts/startscreen.gd" type="Script" id=2]
+[ext_resource path="res://themes/button_theme.tres" type="StyleBox" id=3]
+[ext_resource path="res://themes/button_hover_theme.tres" type="StyleBox" id=4]
+[ext_resource path="res://themes/font_theme.tres" type="DynamicFont" id=5]
 
 [node name="startscreen" type="Control"]
 anchor_right = 1.0
@@ -24,6 +27,9 @@ margin_right = 672.313
 margin_bottom = 517.546
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 65.0929, 16.5 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
 text = "Créditos"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,6 +43,9 @@ margin_right = 437.359
 margin_bottom = 517.864
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 65.0929, 16.5 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
 text = "Jogar"
 __meta__ = {
 "_edit_use_anchors_": false

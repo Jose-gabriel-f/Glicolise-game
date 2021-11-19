@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/creditos.gd" type="Script" id=1]
+[ext_resource path="res://themes/button_hover_theme.tres" type="StyleBox" id=2]
+[ext_resource path="res://themes/button_theme.tres" type="StyleBox" id=3]
+[ext_resource path="res://themes/font_theme.tres" type="DynamicFont" id=4]
 
 [node name="creditos" type="Control"]
 anchor_right = 1.0
@@ -13,6 +16,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 4 )
 text = "Time DEV
 José Gabriel
 Matheus Emidio
@@ -40,6 +44,9 @@ margin_left = -24.5
 margin_top = -107.935
 margin_right = 24.5
 margin_bottom = -87.9354
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
 text = "Voltar"
 __meta__ = {
 "_edit_use_anchors_": false
